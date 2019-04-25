@@ -1,0 +1,36 @@
+{
+  "name": "revolutionize-health_dominic-torruellas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:revolutionizehealth-pt-042219/buildweek-revolutionizeHealth-UI-Dominic-Torruellas.git",
+  "author": "Dominic Torruellas <dom@domtorr.com>",
+  "license": "MIT",
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "scripts": {
+    "dev:gulp": "rm -rf src/app/*.css && gulp",
+    "dev:parcel": "rm -rf .cache/ dist/ && parcel ./src/app/index.html",
+    "build": "rm -rf .cache/ dist/ src/app/*.css && gulp build && parcel build ./src/index.html"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "autoprefixer": "^9.5.1",
+    "eslint": "^5.16.0",
+    "gulp": "^4.0.1",
+    "gulp-less": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "less": "^3.9.0",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1",
+    "precss": "^4.0.0",
+    "rucksack-css": "^1.0.2",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0"
+  }
+}
