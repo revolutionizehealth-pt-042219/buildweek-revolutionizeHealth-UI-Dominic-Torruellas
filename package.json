@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "dev:gulp": "rm -rf src/app/*.css && gulp",
-    "dev:parcel": "rm -rf .cache/ dist/ && parcel ./src/app/index.html",
+    "dev:parcel": "rm -rf .cache/ dist/ && parcel ./src/app/index.html -d dev-build",
     "build": "rm -rf .cache/ dist/ src/app/*.css && gulp build && parcel build ./src/index.html"
   },
   "devDependencies": {
