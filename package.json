@@ -1,7 +1,6 @@
 {
   "name": "revolutionize-health_dominic-torruellas",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:revolutionizehealth-pt-042219/buildweek-revolutionizeHealth-UI-Dominic-Torruellas.git",
   "author": "Dominic Torruellas <dom@domtorr.com>",
   "license": "MIT",
