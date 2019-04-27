@@ -511,13 +511,13 @@ body {
   }
 }
 .banner .nav .nav-links.active {
-  -webkit-animation: scale-display 0.2s;
-          animation: scale-display 0.2s;
+  -webkit-animation: scale-display 0.3s;
+          animation: scale-display 0.3s;
   display: inline-flex;
 }
 .banner .nav .nav-links.out {
-  -webkit-animation: scale-display--reversed 0.2s;
-          animation: scale-display--reversed 0.2s;
+  -webkit-animation: scale-display--reversed 0.3s;
+          animation: scale-display--reversed 0.3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   display: inline-flex;
