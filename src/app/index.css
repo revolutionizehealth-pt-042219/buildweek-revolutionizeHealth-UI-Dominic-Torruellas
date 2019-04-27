@@ -427,16 +427,16 @@ body {
   margin: 0 23px;
   padding: 20px 0;
 }
-.banner .nav .logo {
-  -webkit-filter: drop-shadow(1px 5px 2px rgba(12, 13, 19, 0.863));
-          filter: drop-shadow(1px 5px 2px rgba(12, 13, 19, 0.863));
+.banner .nav .nav-container .logo {
+  -webkit-filter: drop-shadow(1px 5px 2px rgba(18, 20, 28, 0.863));
+          filter: drop-shadow(1px 5px 2px rgba(18, 20, 28, 0.863));
   width: 85px;
 }
-.banner .nav .hamburger {
+.banner .nav .nav-container .hamburger {
   mix-blend-mode: normal;
   opacity: 0.7;
-  -webkit-filter: drop-shadow(0 2px 2px rgba(12, 13, 19, 0.863));
-          filter: drop-shadow(0 2px 2px rgba(12, 13, 19, 0.863));
+  -webkit-filter: drop-shadow(0 2px 2px rgba(18, 20, 28, 0.863));
+          filter: drop-shadow(0 2px 2px rgba(18, 20, 28, 0.863));
 }
 .banner .nav .nav-links {
   display: flex;
@@ -448,65 +448,65 @@ body {
 @-webkit-keyframes scale-display {
   0% {
     opacity: 0;
-    transform: scale(0);
     -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
     opacity: 1;
-    transform: scale(1);
     -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @keyframes scale-display {
   0% {
     opacity: 0;
-    transform: scale(0);
     -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
     opacity: 1;
-    transform: scale(1);
     -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @-webkit-keyframes scale-display--reversed {
   0% {
     display: inline-flex;
     opacity: 1;
-    transform: scale(1);
     -webkit-transform: scale(1);
+            transform: scale(1);
   }
   99% {
     display: inline-flex;
     opacity: 0;
-    transform: scale(0);
     -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
     display: none;
     opacity: 0;
-    transform: scale(0);
     -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 @keyframes scale-display--reversed {
   0% {
     display: inline-flex;
     opacity: 1;
-    transform: scale(1);
     -webkit-transform: scale(1);
+            transform: scale(1);
   }
   99% {
     display: inline-flex;
     opacity: 0;
-    transform: scale(0);
     -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
     display: none;
     opacity: 0;
-    transform: scale(0);
     -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 .banner .nav .nav-links.active {
@@ -522,7 +522,7 @@ body {
   display: inline-flex;
 }
 .banner .nav .nav-links a {
-  color: #dce6f7;
+  color: rgba(220, 230, 247, 0.8);
   text-decoration: none;
-  text-shadow: 0 5px 2px #14161f;
+  text-shadow: 0 4px 2px #12141c;
 }
