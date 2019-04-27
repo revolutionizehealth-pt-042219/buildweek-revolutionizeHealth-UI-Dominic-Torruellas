@@ -393,11 +393,66 @@ img {
   large: Larger than 60em
 
 */
-.banner {
-  background-image: url('./images/bacteria-163711.jpg');
-  height: 60vh;
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
 }
-.logo {
-  opacity: 0.8;
-  width: 80px;
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
+body {
+  background-color: #445e93;
+  font-family: Roboto, sans-serif;
+}
+.banner {
+  height: 250px;
+  background: url(./images/top-banner.png) no-repeat;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  mix-blend-mode: luminosity;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-size: cover;
+}
+.banner .nav {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  background: linear-gradient(180deg, rgba(58, 64, 90, 0.8) 0%, rgba(58, 64, 90, 0.4375) 59.9%, rgba(58, 64, 90, 0.210227) 90.62%, rgba(58, 64, 90, 0) 100%);
+}
+.banner .nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 23px;
+  padding-top: 10px;
+}
+.banner .nav .logo {
+  -webkit-filter: drop-shadow(0 4px 4px rgba(58, 64, 90, 0.5));
+          filter: drop-shadow(0 4px 4px rgba(58, 64, 90, 0.5));
+  width: 85px;
+}
+.banner .nav .hamburger {
+  mix-blend-mode: normal;
+  opacity: 0.9;
+  -webkit-filter: drop-shadow(0 4px 4px rgba(58, 64, 90, 0.5));
+          filter: drop-shadow(0 4px 4px rgba(58, 64, 90, 0.5));
+}
+.banner .nav .nav-links {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(68, 94, 147, 0.01) 0%, rgba(68, 94, 147, 0.01) 5%, rgba(68, 94, 147, 0.56) 32%, rgba(65, 86, 132, 0.72) 40%, rgba(59, 68, 98, 0.72) 58%, rgba(58, 64, 90, 0.64) 62%, rgba(58, 64, 90, 0) 96%, rgba(58, 64, 90, 0) 100%);
+  font-size: 24px;
+}
+.banner .nav .nav-links a {
+  color: #dce6f7;
+  text-decoration: none;
+  text-shadow: 0 4px 4px rgba(58, 64, 90, 0.5);
 }

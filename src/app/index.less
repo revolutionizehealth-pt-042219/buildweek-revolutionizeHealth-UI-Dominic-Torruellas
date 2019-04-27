@@ -1,12 +1,75 @@
 // Global CSS
 @import '../includes/_globals.less';
 
-.banner {
-  background-image: url('./images/bacteria-163711.jpg');
-  height: 60vh;
+body {
+  background-color: @secondary;
+  font-family: Roboto, sans-serif;
 }
 
-.logo {
-  opacity: .8;
-  width: 80px;
+.banner {
+  height: 250px;
+  background: url(./images/top-banner.png) no-repeat;
+  object-fit: scale-down;
+  mix-blend-mode: luminosity;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-size: cover;
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(58, 64, 90, 0.8) 0%,
+        rgba(58, 64, 90, 0.4375) 59.9%,
+        rgba(58, 64, 90, 0.210227) 90.62%,
+        rgba(58, 64, 90, 0) 100%
+      );
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 23px;
+      padding-top: 10px;
+    }
+
+    .logo {
+      filter: drop-shadow(0 4px 4px rgba(58, 64, 90, 0.5));
+      width: 85px;
+    }
+
+    .hamburger {
+      mix-blend-mode: normal;
+      opacity: 0.9;
+      filter: drop-shadow(0 4px 4px rgba(58, 64, 90, 0.5));
+    }
+
+    .nav-links {
+      display: none;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 40px;
+      height: 100px;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(68, 94, 147, 0.01) 0%,
+          rgba(68, 94, 147, 0.01) 5%,
+          rgba(68, 94, 147, 0.56) 32%,
+          rgba(65, 86, 132, 0.72) 40%,
+          rgba(59, 68, 98, 0.72) 58%,
+          rgba(58, 64, 90, 0.64) 62%,
+          rgba(58, 64, 90, 0) 96%,
+          rgba(58, 64, 90, 0) 100%
+        );
+      font-size: 24px;
+      a {
+        color: #dce6f7;
+        text-decoration: none;
+        text-shadow: 0 4px 4px rgba(58, 64, 90, 0.5);
+      }
+    }
+  }
 }
