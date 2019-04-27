@@ -6,7 +6,7 @@ const precss = require('precss');
 const rucksack = require('rucksack-css');
 
 const srcPath = './src/app/**/*.less';
-const watchPath = './src/app/**/*.less';
+const watchPath = ['./src/app/**/*.less', './src/includes/*.less'];
 
 gulp.task('css', () => {
   const processors = [precss({}), rucksack({})];
