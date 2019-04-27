@@ -428,22 +428,21 @@ body {
   padding: 20px 0;
 }
 .banner .nav .logo {
-  -webkit-filter: drop-shadow(0 4px 4px rgba(58, 64, 90, 0.5));
-          filter: drop-shadow(0 4px 4px rgba(58, 64, 90, 0.5));
+  -webkit-filter: drop-shadow(1px 5px 2px rgba(12, 13, 19, 0.863));
+          filter: drop-shadow(1px 5px 2px rgba(12, 13, 19, 0.863));
   width: 85px;
 }
 .banner .nav .hamburger {
   mix-blend-mode: normal;
-  opacity: 0.9;
-  -webkit-filter: drop-shadow(0 4px 4px rgba(58, 64, 90, 0.5));
-          filter: drop-shadow(0 4px 4px rgba(58, 64, 90, 0.5));
+  opacity: 0.7;
+  -webkit-filter: drop-shadow(0 2px 2px rgba(12, 13, 19, 0.863));
+          filter: drop-shadow(0 2px 2px rgba(12, 13, 19, 0.863));
 }
 .banner .nav .nav-links {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100px;
-  background: linear-gradient(to bottom, rgba(68, 94, 147, 0.01) 0%, rgba(68, 94, 147, 0.01) 5%, rgba(68, 94, 147, 0.56) 32%, rgba(65, 86, 132, 0.72) 40%, rgba(59, 68, 98, 0.72) 58%, rgba(58, 64, 90, 0.64) 62%, rgba(58, 64, 90, 0) 96%, rgba(58, 64, 90, 0) 100%);
   font-size: 24px;
 }
 @-webkit-keyframes scale-display {
