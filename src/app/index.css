@@ -406,10 +406,14 @@ img {
   src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
 }
 body {
-  background-color: #445e93;
+  background-color: #262a3b;
   font-family: Roboto, sans-serif;
 }
 .container {
+  background-color: #445e93;
+  display: flex;
+  flex-direction: column;
+  max-width: 1080px;
   min-height: 100vh;
   position: relative;
   margin: 0 auto;
@@ -532,9 +536,13 @@ body {
   text-shadow: 0 4px 2px #12141c;
 }
 .body {
-  padding-bottom: 210px;
+  padding: 0 10px;
 }
 .footer {
+  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.25);
+  height: 200px;
+}
+.footer-background-container {
   position: absolute;
   bottom: 0;
   height: 200px;
@@ -542,8 +550,9 @@ body {
   left: 0;
   right: 0;
   z-index: 0;
+  overflow: hidden;
 }
-.footer::before {
+.footer-background-container::before {
   content: '';
   position: absolute;
   left: 0;
@@ -557,20 +566,19 @@ body {
   -webkit-filter: blur(2px);
           filter: blur(2px);
 }
-.footer .footer-container {
+.footer-background-container .footer-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
   background: linear-gradient(180deg, rgba(58, 64, 90, 0) 0%, rgba(58, 64, 90, 0.43) 18.23%, rgba(58, 64, 90, 0.759639) 47.4%, #3a405a 100%);
-  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.25);
 }
-.footer .footer-container .footer-cards {
+.footer-background-container .footer-container .footer-cards {
   display: flex;
   justify-content: space-between;
   padding: 0 5px;
 }
-.footer .footer-container .footer-cards .card {
+.footer-background-container .footer-container .footer-cards .card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -583,20 +591,20 @@ body {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 }
-.footer .footer-container .footer-cards .card .footer-card-header {
+.footer-background-container .footer-container .footer-cards .card .footer-card-header {
   font-size: 18px;
   text-shadow: 0 2px 2px #12141c;
   text-align: center;
   color: rgba(220, 230, 247, 0.7);
 }
-.footer .footer-container .footer-cards .card .footer-card-content {
+.footer-background-container .footer-container .footer-cards .card .footer-card-content {
   font-size: 14px;
   text-shadow: 0 2px 2px #12141c;
   text-align: center;
   max-width: 300px;
   color: rgba(220, 230, 247, 0.7);
 }
-.footer .footer-container .footer-cards .card .footer-links {
+.footer-background-container .footer-container .footer-cards .card .footer-links {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -604,18 +612,18 @@ body {
   display: flex;
   flex-direction: column;
 }
-.footer .footer-container .footer-cards .card .footer-links li {
+.footer-background-container .footer-container .footer-cards .card .footer-links li {
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1 1 auto;
 }
-.footer .footer-container .footer-cards .card .footer-links li a {
+.footer-background-container .footer-container .footer-cards .card .footer-links li a {
   color: rgba(220, 230, 247, 0.8);
   text-decoration: none;
   text-shadow: 0 2px 2px #12141c;
 }
-.footer .footer-container .copyright {
+.footer-background-container .footer-container .copyright {
   color: rgba(220, 230, 247, 0.7);
   font-size: 16px;
   align-self: center;

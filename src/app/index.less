@@ -2,11 +2,15 @@
 @import '../includes/_globals.less';
 
 body {
-  background-color: @secondary;
+  background-color: darken(@dark-blue, 10%);
   font-family: Roboto, sans-serif;
 }
 
 .container {
+  background-color: @secondary;
+  display: flex;
+  flex-direction: column;
+  max-width: 1080px;
   min-height: 100vh;
   position: relative;
   margin: 0 auto;
