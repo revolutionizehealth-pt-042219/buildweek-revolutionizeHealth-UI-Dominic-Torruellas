@@ -106,10 +106,14 @@ body {
 }
 
 .body {
-  padding-bottom: 210px;
+  padding: 0 10px;
 }
 
 .footer {
+  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.25);
+  height: 200px;
+}
+.footer-background-container {
   &::before {
     content: '';
     position: absolute;
@@ -131,6 +135,7 @@ body {
   left: 0;
   right: 0;
   z-index: 0;
+  overflow: hidden;
   .footer-container {
     display: flex;
     flex-direction: column;
@@ -144,7 +149,6 @@ body {
         rgba(58, 64, 90, 0.759639) 47.4%,
         #3a405a 100%
       );
-    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.25);
 
     .footer-cards {
       display: flex;
