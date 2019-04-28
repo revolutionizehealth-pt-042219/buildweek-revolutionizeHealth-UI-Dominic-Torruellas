@@ -13,7 +13,7 @@
   "scripts": {
     "dev:gulp": "rm -rf src/app/*.css && gulp",
     "dev:parcel": "rm -rf .cache/ ./dev-build && parcel ./src/app/index.html -d dev-build",
-    "build": "rm -rf .cache/ dist/ src/app/*.css && gulp build && parcel build ./src/index.html"
+    "build": "rm -rf .cache/ dist/ src/app/*.css && gulp build && parcel build ./src/app/index.html"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
