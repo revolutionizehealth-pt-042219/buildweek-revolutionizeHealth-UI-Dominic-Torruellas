@@ -110,10 +110,13 @@ body {
 }
 
 .body {
+  flex: 1 0 auto;
+  min-height: 100%;
   padding: 0 10px;
 }
 
 .footer {
+  flex-shrink: 0;
   box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.25);
   height: 200px;
   background-color: darken(@dark-blue, 10%);
@@ -135,9 +138,7 @@ body {
     }
 
     position: absolute;
-    bottom: 0;
     height: 200px;
-    width: 100%;
     left: 0;
     right: 0;
     z-index: 0;
