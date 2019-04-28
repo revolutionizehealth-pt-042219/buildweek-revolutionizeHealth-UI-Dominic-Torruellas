@@ -419,7 +419,7 @@ body {
   margin: 0 auto;
 }
 .banner {
-  background: url('./images/top-banner.webp');
+  background: url('./images/top-banner.jpg');
   mix-blend-mode: luminosity;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   background-size: cover;
@@ -608,7 +608,7 @@ body {
   right: 0;
   z-index: -1;
   display: block;
-  background-image: url('./images/footer-image.webp');
+  background-image: url('./images/footer-image.jpg');
   background-size: cover;
   opacity: 0.5;
   width: 100%;
