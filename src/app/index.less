@@ -6,8 +6,14 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.container {
+  min-height: 100vh;
+  position: relative;
+  margin: 0 auto;
+}
+
 .banner {
-  background: url(./images/top-banner.png);
+  background: url(./images/top-banner.webp);
   mix-blend-mode: luminosity;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   background-size: cover;
@@ -95,6 +101,108 @@ body {
         text-decoration: none;
         text-shadow: 0 4px 2px darken(@dark-blue, 20%);
       }
+    }
+  }
+}
+
+.body {
+  padding-bottom: 210px;
+}
+
+.footer {
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url('./images/footer-image.webp');
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    filter: blur(2px);
+  }
+
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(58, 64, 90, 0) 0%,
+        rgba(58, 64, 90, 0.43) 18.23%,
+        rgba(58, 64, 90, 0.759639) 47.4%,
+        #3a405a 100%
+      );
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.25);
+
+    .footer-cards {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5px;
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 5px;
+        padding: 10px;
+        flex: 1 1 170px;
+        height: 150px;
+        background: rgba(darken(@light-blue, 20%), 0.2);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        .footer-card-header {
+          font-size: 18px;
+          text-shadow: 0 2px 2px darken(@dark-blue, 20%);
+          text-align: center;
+          color: rgba(@light-blue, 0.7);
+        }
+        .footer-card-content {
+          font-size: 14px;
+          text-shadow: 0 2px 2px darken(@dark-blue, 20%);
+          text-align: center;
+          max-width: 300px;
+          color: rgba(@light-blue, 0.7);
+        }
+
+        .footer-links {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 auto;
+            a {
+              color: rgba(@light-blue, 0.8);
+              text-decoration: none;
+              text-shadow: 0 2px 2px darken(@dark-blue, 20%);
+            }
+          }
+        }
+      }
+    }
+
+    .copyright {
+      color: rgba(@light-blue, 0.7);
+      font-size: 16px;
+      align-self: center;
+      text-shadow: 0 2px 2px darken(@dark-blue, 20%);
     }
   }
 }
