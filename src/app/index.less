@@ -132,10 +132,17 @@ body {
   min-height: 100%;
   padding: 0 10px;
 
-  :nth-child(1) {
+  .card-container-2w {
+    display: flex;
+    flex-direction: column;
     margin-top: 15px;
+    @media (--bp-tablet) {
+      flex-direction: row;
+      .main-card:nth-child(1) {
+        margin-right: 15px;
+      }
+    }
   }
-
   .main-card {
     align-items: center;
     border-radius: 5px;
@@ -171,8 +178,17 @@ body {
         margin: 0;
       }
 
+      &.two-p {
+        @media (--bp-tablet) {
+          display: flex;
+        }
+      }
       &.two-p p:nth-of-type(1) {
         margin-bottom: 25px;
+        @media (--bp-tablet) {
+          margin-bottom: 0;
+          margin-right: 25px;
+        }
       }
 
       background-color: @light-blue;
