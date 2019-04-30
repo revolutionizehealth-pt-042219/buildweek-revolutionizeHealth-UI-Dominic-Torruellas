@@ -606,6 +606,13 @@ body {
     width: 190px;
   }
 }
+@media screen and (min-width: 501px) {
+  .footer .footer-background-container .footer-container .footer-logo {
+    display: flex;
+    margin: 0 5px;
+    max-width: 15%;
+  }
+}
 .footer .footer-background-container .footer-container .footer-cards {
   display: flex;
   justify-content: space-between;
