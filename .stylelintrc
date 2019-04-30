@@ -1,5 +1,6 @@
 {
   "extends": "stylelint-config-standard",
+  "plugins": ["stylelint-order"],
   "rules": {
     "at-rule-empty-line-before": null,
     "at-rule-no-unknown": null,
@@ -17,6 +18,8 @@
     "number-no-trailing-zeros": true,
     "property-no-unknown": null,
     "rule-empty-line-before": null,
-    "string-quotes": "single"
+    "string-quotes": "single",
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-alphabetical-order": true
   }
 }
