@@ -24,6 +24,10 @@ body {
   transform: translateZ(0);
 
   .nav {
+    @media (--bp-mobile) {
+      flex-direction: row;
+    }
+
     background:
       linear-gradient(
         to bottom,
@@ -47,14 +51,27 @@ body {
         width: 85px;
       }
 
+      .hamburger-container {
+        @media (--bp-mobile) {
+          display: none;
+        }
+
       .hamburger {
         filter: drop-shadow(0 2px 2px rgba(@shadow-color, 0.863));
         mix-blend-mode: normal;
         opacity: 0.7;
       }
     }
+    }
 
     .nav-links {
+      @media (--bp-mobile) {
+        display: flex;
+        flex: 1 1 auto;
+        // height: 100%;
+        // justify-content: space-around;
+        // margin-right: 10px;
+      }
       @keyframes scale-display {
         0% {
           opacity: 0;
