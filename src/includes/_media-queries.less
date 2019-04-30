@@ -15,6 +15,6 @@
 
 // Media Queries
 
-@custom-media --breakpoint-not-small screen and (min-width: @bp-not-small-size);
-@custom-media --breakpoint-medium screen and (min-width: @bp-not-small-size) and (max-width: @bp-large-size);
-@custom-media --breakpoint-large screen and (min-width: @bp-large-size);
+@custom-media --bp-mobile screen and (min-width: @bp-mobile);
+@custom-media --bp-tablet screen and (min-width: @bp-mobile) and (max-width: @bp-tablet);
+@custom-media --bp-desktop screen and (min-width: @bp-desktop);
