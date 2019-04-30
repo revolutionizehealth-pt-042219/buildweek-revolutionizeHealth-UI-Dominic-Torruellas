@@ -321,51 +321,6 @@ img {
 }
 /*
 
-   BACKGROUND SIZE
-   Docs: http://tachyons.io/docs/themes/background-size/
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
-*/
-/*
-  Often used in combination with background image set as an inline style
-  on an html element.
-*/
-.cover {
-  background-size: cover !important;
-}
-.contain {
-  background-size: contain !important;
-}
-@media screen and (min-width: 30em) {
-  .cover-ns {
-    background-size: cover !important;
-  }
-  .contain-ns {
-    background-size: contain !important;
-  }
-}
-@media screen and (min-width: 30em) and (max-width: 60em) {
-  .cover-m {
-    background-size: cover !important;
-  }
-  .contain-m {
-    background-size: contain !important;
-  }
-}
-@media screen and (min-width: 60em) {
-  .cover-l {
-    background-size: cover !important;
-  }
-  .contain-l {
-    background-size: contain !important;
-  }
-}
-/*
-
   BREAK POINT VARIABLES
 
   Here are stored the media query breakpoint sizes
@@ -374,9 +329,9 @@ img {
   These variables will also be used for some other
   responsive things like rucksacks responsive fonts
 
-  Default "not small" size is 30em;
-  Default "medium" size is ("not small" + "large") / 2
-  Default "larg" size is 60em;
+  Default "not small" size is 500px;
+  Default "medium" size is 800px;
+  Default "larg" size is 1000px;
 
 */
 /*
@@ -431,6 +386,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 501px) {
+  .banner .nav {
+    flex-direction: row;
+  }
+}
 .banner .nav .nav-container {
   align-items: center;
   display: flex;
@@ -443,7 +403,12 @@ body {
           filter: drop-shadow(1px 5px 2px rgba(18, 20, 28, 0.863));
   width: 85px;
 }
-.banner .nav .nav-container .hamburger {
+@media screen and (min-width: 501px) {
+  .banner .nav .nav-container .hamburger-container {
+    display: none;
+  }
+}
+.banner .nav .nav-container .hamburger-container .hamburger {
   -webkit-filter: drop-shadow(0 2px 2px rgba(18, 20, 28, 0.863));
           filter: drop-shadow(0 2px 2px rgba(18, 20, 28, 0.863));
   mix-blend-mode: normal;
@@ -455,6 +420,12 @@ body {
   font-size: 24px;
   height: 100px;
   justify-content: space-around;
+}
+@media screen and (min-width: 501px) {
+  .banner .nav .nav-links {
+    display: flex;
+    flex: 1 1 auto;
+  }
 }
 @-webkit-keyframes scale-display {
   0% {
@@ -624,6 +595,16 @@ body {
   flex-direction: column;
   height: 100%;
   justify-content: space-evenly;
+}
+.footer .footer-background-container .footer-container .footer-logo {
+  display: none;
+}
+@media screen and (min-width: 801px) {
+  .footer .footer-background-container .footer-container .footer-logo {
+    display: flex;
+    margin: 0 20px;
+    width: 190px;
+  }
 }
 .footer .footer-background-container .footer-container .footer-cards {
   display: flex;
