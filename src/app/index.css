@@ -625,6 +625,7 @@ body {
   justify-content: space-evenly;
 }
 .footer .footer-background-container .footer-container .footer-logo {
+  max-height: 150px;
   display: none;
 }
 @media screen and (min-width: 501px) {
