@@ -25,7 +25,9 @@ body {
 
   .nav {
     @media (--bp-mobile) {
+      align-items: center;
       flex-direction: row;
+      justify-content: space-around;
     }
 
     background:
@@ -49,6 +51,9 @@ body {
       .logo {
         filter: drop-shadow(1px 5px 2px rgba(@shadow-color, 0.863));
         width: 85px;
+        @media (--bp-tablet) {
+          width: 150px;
+        }
       }
 
       .hamburger-container {
@@ -68,9 +73,6 @@ body {
       @media (--bp-mobile) {
         display: flex;
         flex: 1 1 auto;
-        // height: 100%;
-        // justify-content: space-around;
-        // margin-right: 10px;
       }
       @keyframes scale-display {
         0% {
