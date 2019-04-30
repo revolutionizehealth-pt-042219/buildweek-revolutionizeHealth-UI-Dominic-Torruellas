@@ -566,6 +566,7 @@ body {
   height: 60px;
   width: 100%;
   margin-bottom: 0;
+  border-bottom: 1px solid rgba(115, 98, 138, 0.7);
 }
 .body .main-card .main-card-img {
   width: 100%;
@@ -576,10 +577,11 @@ body {
 .body .main-card .main-card-content {
   background-color: #dce6f7;
   color: #3a405a;
-  padding: 25px 40px;
+  padding: 25px 25px;
   font-size: 16px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-top: 1px solid rgba(115, 98, 138, 0.7);
 }
 .body .main-card .main-card-content p {
   margin: 0;
@@ -634,7 +636,7 @@ body {
   justify-content: space-around;
   align-items: center;
   margin: 0 5px;
-  padding: 10px;
+  padding: 5px;
   flex: 1 1 170px;
   height: 150px;
   background: rgba(137, 171, 228, 0.2);
