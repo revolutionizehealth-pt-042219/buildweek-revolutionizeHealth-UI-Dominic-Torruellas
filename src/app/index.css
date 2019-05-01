@@ -510,10 +510,15 @@ body {
           animation-fill-mode: forwards;
   display: inline-flex;
 }
-.banner .nav .nav-links a {
+.banner .nav .nav-links .nav-link {
   color: rgba(220, 230, 247, 0.8);
+  padding: 5px 5px;
   text-decoration: none;
   text-shadow: 0 4px 4px #12141c;
+}
+.banner .nav .nav-links .nav-link:hover {
+  background: radial-gradient(ellipse at center, rgba(68, 94, 147, 0.76) 0%, rgba(68, 94, 147, 0.68) 9%, rgba(68, 94, 147, 0.45) 26%, rgba(5, 171, 224, 0.26) 40%, rgba(5, 171, 224, 0) 60%);
+  color: #dce6f7;
 }
 .body {
   flex: 1 0 auto;
@@ -625,20 +630,22 @@ body {
   justify-content: space-evenly;
 }
 .footer .footer-background-container .footer-container .footer-logo {
-  max-height: 150px;
   display: none;
+  -webkit-filter: drop-shadow(1px 5px 2px rgba(18, 20, 28, 0.863));
+          filter: drop-shadow(1px 5px 2px rgba(18, 20, 28, 0.863));
+  max-height: 150px;
 }
 @media screen and (min-width: 501px) {
   .footer .footer-background-container .footer-container .footer-logo {
     display: flex;
-    margin: 0 calc(100vw * 0.02);
-    max-width: 15%;
+    margin: 0 calc(100vw * 0.01);
+    max-width: 20%;
   }
 }
 @media screen and (min-width: 801px) {
   .footer .footer-background-container .footer-container .footer-logo {
     display: flex;
-    margin: 0 calc(100vw * 0.05);
+    margin: 0 calc(100vw * 0.03);
     width: 190px;
   }
 }
@@ -702,13 +709,15 @@ body {
 .footer .footer-background-container .footer-container .footer-cards .footer-card .footer-links {
   background-color: rgba(40, 34, 49, 0.3);
   border-radius: 5px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
+}
+.footer .footer-background-container .footer-container .footer-cards .footer-card .footer-links :hover {
+  background-color: rgba(90, 77, 108, 0.3);
 }
 .footer .footer-background-container .footer-container .footer-cards .footer-card .footer-links > :first-child {
   border: 1px solid rgba(220, 230, 247, 0.3);
@@ -729,9 +738,14 @@ body {
   justify-content: center;
 }
 .footer .footer-background-container .footer-container .footer-cards .footer-card .footer-links li a {
+  align-items: center;
   color: rgba(220, 230, 247, 0.8);
+  display: flex;
+  height: 100%;
+  justify-content: center;
   text-decoration: none;
   text-shadow: 0 2px 2px #12141c;
+  width: 100%;
 }
 .footer .footer-background-container .footer-container .copyright {
   align-self: center;
