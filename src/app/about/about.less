@@ -63,6 +63,7 @@ body {
         }
 
         .hamburger {
+          cursor: pointer;
           filter: drop-shadow(0 2px 2px rgba(@shadow-color, 0.863));
           mix-blend-mode: normal;
           opacity: 0.7;
@@ -146,6 +147,85 @@ body {
   flex: 1 0 auto;
   min-height: 100%;
   padding: 0 10px;
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    .card {
+      align-items: center;
+      background-color: @primary;
+      border-radius: 0.6rem;
+      box-shadow: 1px 1px 4px rgba(@shadow-color, 0.7);
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      .card-header {
+        align-items: center;
+        background-color: @primary;
+        color: rgba(@light-blue, 1);
+        display: flex;
+        font-family: Raleway, sans-serif;
+        font-size: 18px;
+        justify-content: center;
+        margin-bottom: 0;
+        padding: 3px 0;
+        // text-shadow: 0 1px 2px @shadow-color;
+        width: 100%;
+      }
+
+      .card-hr {
+        border-top: 1px solid rgba(@dark-blue, 0.3);
+        display: flex;
+        justify-content: center;
+        width: 75%;
+      }
+
+      .card-sub-header {
+        align-items: center;
+        background-color: @primary;
+        color: @light-blue;
+        display: flex;
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        justify-content: center;
+        padding: 3px 0;
+        width: 100%;
+      }
+
+      .card-image {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        margin: 0;
+        object-fit: cover;
+        padding: 0;
+        width: 100%;
+      }
+
+      .card-link-section {
+        background-color: @dark-blue;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        width: 100%;
+        .card-link {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          padding: 5px;
+          width: 100%;
+          .card-link-img {
+            opacity: 0.6;
+            width: 32px;
+          }
+        }
+      }
+
+      .card-content {
+        padding: 0 25px;
+      }
+    }
+  }
 }
 
 .footer {

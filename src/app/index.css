@@ -416,6 +416,7 @@ body {
   }
 }
 .banner .nav .nav-container .hamburger-container .hamburger {
+  cursor: pointer;
   -webkit-filter: drop-shadow(0 2px 2px rgba(18, 20, 28, 0.863));
           filter: drop-shadow(0 2px 2px rgba(18, 20, 28, 0.863));
   mix-blend-mode: normal;

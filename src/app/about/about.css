@@ -416,6 +416,7 @@ body {
   }
 }
 .banner .nav .nav-container .hamburger-container .hamburger {
+  cursor: pointer;
   -webkit-filter: drop-shadow(0 2px 2px rgba(18, 20, 28, 0.863));
           filter: drop-shadow(0 2px 2px rgba(18, 20, 28, 0.863));
   mix-blend-mode: normal;
@@ -518,6 +519,78 @@ body {
   flex: 1 0 auto;
   min-height: 100%;
   padding: 0 10px;
+}
+.body .card-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.body .card-container .card {
+  align-items: center;
+  background-color: #7eb2dd;
+  border-radius: 0.6rem;
+  box-shadow: 1px 1px 4px rgba(18, 20, 28, 0.7);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.body .card-container .card .card-header {
+  align-items: center;
+  background-color: #7eb2dd;
+  color: #dce6f7;
+  display: flex;
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  justify-content: center;
+  margin-bottom: 0;
+  padding: 3px 0;
+  width: 100%;
+}
+.body .card-container .card .card-hr {
+  border-top: 1px solid rgba(58, 64, 90, 0.3);
+  display: flex;
+  justify-content: center;
+  width: 75%;
+}
+.body .card-container .card .card-sub-header {
+  align-items: center;
+  background-color: #7eb2dd;
+  color: #dce6f7;
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  justify-content: center;
+  padding: 3px 0;
+  width: 100%;
+}
+.body .card-container .card .card-image {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  margin: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0;
+  width: 100%;
+}
+.body .card-container .card .card-link-section {
+  background-color: #3a405a;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  width: 100%;
+}
+.body .card-container .card .card-link-section .card-link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  width: 100%;
+}
+.body .card-container .card .card-link-section .card-link .card-link-img {
+  opacity: 0.6;
+  width: 32px;
+}
+.body .card-container .card .card-content {
+  padding: 0 25px;
 }
 .footer {
   background-color: #262a3b;
