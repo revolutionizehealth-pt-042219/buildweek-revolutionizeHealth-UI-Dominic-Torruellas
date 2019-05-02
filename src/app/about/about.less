@@ -1,5 +1,5 @@
 // Global CSS
-@import '../includes/_globals.less';
+@import '../../includes/_globals.less';
 
 body {
   background-color: darken(@dark-blue, 10%);
@@ -17,7 +17,7 @@ body {
 }
 
 .banner {
-  background: url('./images/top-banner.jpg');
+  background: url('../images/top-banner.jpg');
   background-size: cover;
   box-shadow: 0 4px 4px rgba(@shadow-color, 0.25);
   mix-blend-mode: luminosity;
@@ -146,75 +146,6 @@ body {
   flex: 1 0 auto;
   min-height: 100%;
   padding: 0 10px;
-
-  .card-container-2w {
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-    @media (--bp-tablet) {
-      flex-direction: row;
-      .main-card:nth-child(1) {
-        margin-right: 15px;
-      }
-    }
-  }
-  .main-card {
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 1px 1px 4px rgba(@shadow-color, 0.7);
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-
-    .main-card-header {
-      align-items: center;
-      background-color: @primary;
-      border-bottom: 1px solid rgba(@purple, 0.7);
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      color: @light-blue;
-      display: flex;
-      font-family: Raleway, sans-serif;
-      height: 60px;
-      justify-content: center;
-      margin: 0;
-      margin-bottom: 0;
-      width: 100%;
-    }
-
-    .main-card-img {
-      max-height: 200px;
-      object-fit: cover;
-      width: 100%;
-    }
-
-    .main-card-content {
-      p {
-        margin: 0;
-      }
-
-      &.two-p {
-        @media (--bp-tablet) {
-          display: flex;
-        }
-      }
-      &.two-p p:nth-of-type(1) {
-        margin-bottom: 25px;
-        @media (--bp-tablet) {
-          margin-bottom: 0;
-          margin-right: 25px;
-        }
-      }
-
-      background-color: @light-blue;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      border-top: 1px solid rgba(@purple, 0.7);
-      color: @dark-blue;
-      font-size: 16px;
-      padding: 25px 25px;
-    }
-  }
 }
 
 .footer {
@@ -225,7 +156,7 @@ body {
 
   .footer-background-container {
     &::before {
-      background-image: url('./images/footer-image.jpg');
+      background-image: url('../images/footer-image.jpg');
       background-size: cover;
       content: '';
       display: block;
