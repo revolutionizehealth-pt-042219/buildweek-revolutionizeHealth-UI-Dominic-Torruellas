@@ -521,12 +521,14 @@ body {
   padding: 0 10px;
 }
 .body .card-container {
+  align-items: center;
   background-color: rgba(220, 230, 247, 0.2);
   border-radius: 0.6rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   margin: 15px 0;
+  min-height: calc(100vh - 310px);
 }
 .body .card-container .card {
   align-items: center;

@@ -538,8 +538,14 @@ body {
   border-radius: 5px;
   box-shadow: 1px 1px 4px rgba(18, 20, 28, 0.7);
   display: flex;
+  flex: 1 1 0;
   flex-direction: column;
   margin-bottom: 15px;
+}
+@media (max-width: 801px) {
+  .body .main-card {
+    flex: 1 1 auto;
+  }
 }
 .body .main-card .main-card-header {
   align-items: center;
@@ -550,10 +556,10 @@ body {
   color: #dce6f7;
   display: flex;
   font-family: Raleway, sans-serif;
-  height: 60px;
   justify-content: center;
   margin: 0;
   margin-bottom: 0;
+  min-height: 45px;
   width: 100%;
 }
 .body .main-card .main-card-img {
@@ -569,7 +575,9 @@ body {
   border-top: 1px solid rgba(115, 98, 138, 0.7);
   color: #3a405a;
   font-size: 16px;
+  height: 100%;
   padding: 25px 25px;
+  width: 100%;
 }
 .body .main-card .main-card-content p {
   margin: 0;
