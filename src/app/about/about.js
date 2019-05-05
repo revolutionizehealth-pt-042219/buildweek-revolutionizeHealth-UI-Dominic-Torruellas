@@ -93,14 +93,14 @@ const devs = [
   ),
 ];
 
-const Cards = devs.map(dev =>
+const Cards = devs.map(({ img, name, position, github }) =>
   Div('card', [
-    Img('card-image', dev.img),
-    Div('card-header', dev.name),
+    Img('card-image', img),
+    Div('card-header', name),
     Div('card-hr'),
-    Div('card-sub-header', dev.position),
+    Div('card-sub-header', position),
     Div('card-link-section', [
-      Link('card-link', dev.github, [Img('card-link-img', gitHubImg)]),
+      Link('card-link', github, [Img('card-link-img', gitHubImg)]),
     ]),
   ])
 );
