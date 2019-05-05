@@ -50,14 +50,19 @@ const devs = [
   ),
 ];
 
-export default devs.map(({ img, name, position, github }) =>
-  Div('card', [
-    Img('card-image', img),
-    Div('card-header', name),
-    Div('card-hr'),
-    Div('card-sub-header', position),
-    Div('card-link-section', [
-      Link('card-link', github, [Img('card-link-img', gitHubImg)]),
-    ]),
-  ])
+export default Div(
+  'about-card-container',
+  devs.map(({ img, name, position, github }) =>
+    Div('about-card', [
+      Img('about-card-image', img),
+      Div('about-card-header', name),
+      Div('about-card-hr'),
+      Div('about-card-sub-header', position),
+      Div('about-card-link-section', [
+        Link('about-card-link', github, [
+          Img('about-card-link-img', gitHubImg),
+        ]),
+      ]),
+    ])
+  )
 );

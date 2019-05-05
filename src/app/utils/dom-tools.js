@@ -20,9 +20,13 @@ const createElement = (type, { classes, attributes }, children = null) => {
 };
 
 const Render = (selector, elements) => {
-  elements.forEach(element =>
-    document.querySelector(selector).appendChild(element)
-  );
+  if (Array.isArray(elements)) {
+    elements.forEach(element =>
+      document.querySelector(selector).appendChild(element)
+    );
+  } else {
+    document.querySelector(selector).appendChild(elements);
+  }
 };
 
 const Div = (cls, children) =>
