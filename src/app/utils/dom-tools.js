@@ -48,4 +48,13 @@ const Img = (cls, src) =>
 const Link = (cls, href, children) =>
   createElement('a', { classes: cls, attributes: ['href', href] }, children);
 
-export { createElement, Render, Div, Img, Link };
+const Footer = (cls, children) =>
+  createElement('footer', { classes: cls }, children);
+
+const P = (cls, children) => createElement('p', { classes: cls }, children);
+
+const Ul = (cls, children) => createElement('ul', { classes: cls }, children);
+
+const Li = (cls, children) => createElement('li', { classes: cls }, children);
+
+export { createElement, Render, Div, Img, Link, Footer, P, Ul, Li };
