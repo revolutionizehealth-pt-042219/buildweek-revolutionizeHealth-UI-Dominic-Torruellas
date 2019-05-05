@@ -2,10 +2,10 @@ import './Footer.css';
 import { Footer, Div, Img, Link, P, Ul, Li } from '../../utils/dom-tools';
 import footerImg from '../../assets/images/Logo.svg';
 
-const LeftFooterCard = Div('footer-card', [
-  Div('footer-card-header', 'Rev-Health'),
+const LeftFooterCard = Div({ className: 'footer-card' }, [
+  Div({ className: 'footer-card-header' }, 'Rev-Health'),
   Div(
-    'footer-card-content',
+    { className: 'footer-card-content' },
     P(
       null,
       `Taking on the health industry by exposing pricing in every
@@ -15,29 +15,32 @@ const LeftFooterCard = Div('footer-card', [
 ]);
 
 const RightFooterCard = Div(
-  'footer-card',
-  Ul('footer-links', [
-    Li(null, Link(null, '/index.html', 'Home')),
-    Li(null, Link(null, '/about/about.html', 'About us')),
-    Li(null, Link(null, '#', 'Login')),
+  { className: 'footer-card' },
+  Ul({ className: 'footer-links' }, [
+    Li(null, Link({ href: '/index.html' }, 'Home')),
+    Li(null, Link({ href: '/about/about.html' }, 'About us')),
+    Li(null, Link({ href: '#' }, 'Login')),
   ])
 );
 
 const FooterContent = [
   Div(
-    'footer-card-container',
-    Div('footer-cards', [
+    { className: 'footer-card-container' },
+    Div({ className: 'footer-cards' }, [
       LeftFooterCard,
-      Img('footer-logo', footerImg),
+      Img({ className: 'footer-logo', src: footerImg }),
       RightFooterCard,
     ])
   ),
-  Div('copyright', 'Copyright 2019'),
+  Div({ className: 'copyright' }, 'Copyright 2019'),
 ];
 
 const FooterElement = Footer(
-  'footer',
-  Div('footer-background-container', Div('footer-container', FooterContent))
+  { className: 'footer' },
+  Div(
+    { className: 'footer-background-container' },
+    Div({ className: 'footer-container' }, FooterContent)
+  )
 );
 
 export default FooterElement;

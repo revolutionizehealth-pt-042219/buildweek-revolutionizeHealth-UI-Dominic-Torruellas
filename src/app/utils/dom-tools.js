@@ -1,18 +1,33 @@
-const createElement = (type, { classes, attributes }, children = null) => {
+// Curry function borrowed from:
+// https://mostly-adequate.gitbooks.io/mostly-adequate-guide/appendix_a.html
+// curry :: ((a, b, ...) -> c) -> a -> b -> ... -> c
+function curry(fn) {
+  const arity = fn.length;
+
+  return function $curry(...args) {
+    if (args.length < arity) {
+      return $curry.bind(null, ...args);
+    }
+
+    return fn.call(null, ...args);
+  };
+}
+
+const createElement = curry((type, { className, attr, events }, children) => {
   const newElement = document.createElement(type);
-  if (classes) {
-    if (Array.isArray(classes)) {
-      classes.forEach(classItem => newElement.classList.add(classItem));
+  if (className) {
+    if (Array.isArray(className)) {
+      className.forEach(classItem => newElement.classList.add(classItem));
     } else {
-      newElement.classList.add(classes);
+      newElement.classList.add(className);
     }
   }
 
-  if (attributes) {
-    if (Array.isArray(attributes[0])) {
-      attributes.forEach(([key, value]) => newElement.setAttribute(key, value));
+  if (attr) {
+    if (Array.isArray(attr[0])) {
+      attr.forEach(([key, value]) => newElement.setAttribute(key, value));
     } else {
-      const [key, value] = attributes;
+      const [key, value] = attr;
       newElement.setAttribute(key, value);
     }
   }
@@ -28,7 +43,7 @@ const createElement = (type, { classes, attributes }, children = null) => {
   }
 
   return newElement;
-};
+});
 
 const Render = (selector, elements) => {
   if (Array.isArray(elements)) {
@@ -40,27 +55,41 @@ const Render = (selector, elements) => {
   }
 };
 
-const Div = (cls, children) => createElement('div', { classes: cls }, children);
+const Div = (options, children = null) =>
+  createElement('div', options ? options : {}, children);
 
-const Img = (cls, src) =>
-  createElement('img', { classes: cls, attributes: ['src', src] });
+const Img = ({ src, ...options }) =>
+  createElement('img', { ...options, attr: ['src', src] }, null);
 
-const Link = (cls, href, children) =>
-  createElement('a', { classes: cls, attributes: ['href', href] }, children);
+const Link = ({ href, ...options }, children) => {
+  const newElement = createElement(
+    'a',
+    {
+      ...options,
+      attr: ['href', href],
+    },
+    children
+  );
+  return newElement;
+};
 
-const Footer = (cls, children) =>
-  createElement('footer', { classes: cls }, children);
+const Footer = (options, children = null) =>
+  createElement('footer', options ? options : {}, children);
 
-const P = (cls, children) => createElement('p', { classes: cls }, children);
+const P = (options, children = null) =>
+  createElement('p', options ? options : {}, children);
 
-const Ul = (cls, children) => createElement('ul', { classes: cls }, children);
+const Ul = (options, children = null) =>
+  createElement('ul', options ? options : {}, children);
 
-const Li = (cls, children) => createElement('li', { classes: cls }, children);
+const Li = (options, children = null) =>
+  createElement('li', options ? options : {}, children);
 
-const Header = (cls, children) =>
-  createElement('header', { classes: cls }, children);
+const Header = (options, children = null) =>
+  createElement('header', options ? options : {}, children);
 
-const Nav = (cls, children) => createElement('nav', { classes: cls }, children);
+const Nav = (options, children = null) =>
+  createElement('nav', options ? options : {}, children);
 
 export {
   createElement,

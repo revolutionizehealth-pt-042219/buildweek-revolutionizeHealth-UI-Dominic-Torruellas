@@ -4,16 +4,22 @@ import LogoImg from '../../assets/images/Logo.svg';
 import HamburgerImg from '../../assets/images/Hamburger.svg';
 
 const HeaderElement = Header(
-  'banner',
-  Nav('nav', [
-    Div('nav-container', [
-      Div('logo-container', Link(null, '/index.html', Img('logo', LogoImg))),
-      Div('hamburger-container', Img('hamburger', HamburgerImg)),
+  { className: 'banner' },
+  Nav({ className: 'nav' }, [
+    Div({ className: 'nav-container' }, [
+      Div(
+        { className: 'logo-container' },
+        Link({ href: '/index.html' }, Img({ className: 'logo', src: LogoImg }))
+      ),
+      Div(
+        { className: 'hamburger-container' },
+        Img({ className: 'hamburger', src: HamburgerImg })
+      ),
     ]),
-    Div('nav-links', [
-      Link('nav-link', '/index.html', 'Home'),
-      Link('nav-link', '/about/about.html', 'About Us'),
-      Link('nav-link', '#', 'Login'),
+    Div({ className: 'nav-links' }, [
+      Link({ className: 'nav-link', href: '/index.html' }, 'Home'),
+      Link({ className: 'nav-link', href: '/about/about.html' }, 'About Us'),
+      Link({ className: 'nav-link', href: '#' }, 'Login'),
     ]),
   ])
 );
