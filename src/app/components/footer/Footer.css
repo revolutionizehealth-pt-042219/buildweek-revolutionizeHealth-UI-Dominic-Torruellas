@@ -3,6 +3,7 @@
   box-shadow: 0 -4px 4px rgba(18, 20, 28, 0.25);
   flex-shrink: 0;
   height: 200px;
+  margin-top: 15px;
 }
 .footer .footer-background-container {
   height: 200px;

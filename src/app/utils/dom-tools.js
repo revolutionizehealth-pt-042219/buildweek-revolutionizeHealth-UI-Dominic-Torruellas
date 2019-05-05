@@ -91,6 +91,12 @@ const Header = (options, children = null) =>
 const Nav = (options, children = null) =>
   createElement('nav', options ? options : {}, children);
 
+const H2 = (options, children = null) =>
+  createElement('h2', options ? options : {}, children);
+
+const Section = (options, children = null) =>
+  createElement('h2', options ? options : {}, children);
+
 export {
   createElement,
   Render,
@@ -103,4 +109,6 @@ export {
   Li,
   Header,
   Nav,
+  H2,
+  Section,
 };

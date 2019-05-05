@@ -2,16 +2,12 @@ import './Footer.css';
 import { Footer, Div, Img, Link, P, Ul, Li } from '../../utils/dom-tools';
 import footerImg from '../../assets/images/Logo.svg';
 
+const footerCardPText = `Taking on the health industry by exposing pricing in every
+location on the globe.`;
+
 const LeftFooterCard = Div({ className: 'footer-card' }, [
   Div({ className: 'footer-card-header' }, 'Rev-Health'),
-  Div(
-    { className: 'footer-card-content' },
-    P(
-      null,
-      `Taking on the health industry by exposing pricing in every
-          location on the globe.`
-    )
-  ),
+  Div({ className: 'footer-card-content' }, P(null, footerCardPText)),
 ]);
 
 const RightFooterCard = Div(
