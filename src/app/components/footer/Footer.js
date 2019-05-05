@@ -17,8 +17,8 @@ const LeftFooterCard = Div('footer-card', [
 const RightFooterCard = Div(
   'footer-card',
   Ul('footer-links', [
-    Li(null, Link(null, '/', 'Home')),
-    Li(null, Link(null, '/about', 'About us')),
+    Li(null, Link(null, '/index.html', 'Home')),
+    Li(null, Link(null, '/about/about.html', 'About us')),
     Li(null, Link(null, '#', 'Login')),
   ])
 );

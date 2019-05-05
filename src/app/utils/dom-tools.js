@@ -57,4 +57,21 @@ const Ul = (cls, children) => createElement('ul', { classes: cls }, children);
 
 const Li = (cls, children) => createElement('li', { classes: cls }, children);
 
-export { createElement, Render, Div, Img, Link, Footer, P, Ul, Li };
+const Header = (cls, children) =>
+  createElement('header', { classes: cls }, children);
+
+const Nav = (cls, children) => createElement('nav', { classes: cls }, children);
+
+export {
+  createElement,
+  Render,
+  Div,
+  Img,
+  Link,
+  Footer,
+  P,
+  Ul,
+  Li,
+  Header,
+  Nav,
+};

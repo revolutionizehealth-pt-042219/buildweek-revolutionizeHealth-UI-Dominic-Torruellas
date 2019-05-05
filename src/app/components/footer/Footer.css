@@ -1,32 +1,3 @@
-/*
-
-  BREAK POINT VARIABLES
-
-  Here are stored the media query breakpoint sizes
-  They should be set in em units
-
-  These variables will also be used for some other
-  responsive things like rucksacks responsive fonts
-
-  Default "not small" size is 500px;
-  Default "medium" size is 800px;
-  Default "larg" size is 1000px;
-
-*/
-/*
-
-  MEDIA QUERIES
-
-  Defaults are borrowed from Tachyons CSS
-
-  Set custom sizes in _breakpoint-sizes.less file
-
-  Default media query sizes:
-  not-small: 30em;
-  medium: between 30 and 60em;
-  large: Larger than 60em
-
-*/
 .footer {
   background-color: #262a3b;
   box-shadow: 0 -4px 4px rgba(18, 20, 28, 0.25);
