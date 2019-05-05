@@ -1,6 +1,6 @@
 import gitHubImg from '../../assets/images/GitHub-Mark-Light-32px.png';
 import { Div, Img, Link } from '../../utils/dom-tools';
-import './card.css';
+import './Card.css';
 
 class Dev {
   constructor(name, position, img, github) {
