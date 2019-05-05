@@ -7,7 +7,7 @@ const HeaderElement = Header(
   'banner',
   Nav('nav', [
     Div('nav-container', [
-      Div('logo-container', Link(null, '/', Img('logo', LogoImg))),
+      Div('logo-container', Link(null, '/index.html', Img('logo', LogoImg))),
       Div('hamburger-container', Img('hamburger', HamburgerImg)),
     ]),
     Div('nav-links', [
