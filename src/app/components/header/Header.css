@@ -1,0 +1,142 @@
+.banner {
+  background: url('../../assets/images/top-banner.jpg');
+  background-size: cover;
+  box-shadow: 0 4px 4px rgba(18, 20, 28, 0.25);
+  mix-blend-mode: luminosity;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+.banner .nav {
+  background: linear-gradient(to bottom, rgba(58, 64, 90, 0.75) 0%, rgba(58, 64, 90, 0.66) 60%, rgba(68, 94, 147, 0.6) 95%, rgba(68, 94, 147, 0.6) 100%);
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 501px) {
+  .banner .nav {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.banner .nav .nav-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 23px;
+  padding: 20px 0;
+}
+.banner .nav .nav-container .logo {
+  -webkit-filter: drop-shadow(1px 5px 2px rgba(18, 20, 28, 0.863));
+          filter: drop-shadow(1px 5px 2px rgba(18, 20, 28, 0.863));
+  width: 85px;
+}
+@media screen and (min-width: 801px) {
+  .banner .nav .nav-container .logo {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 501px) {
+  .banner .nav .nav-container .hamburger-container {
+    display: none;
+  }
+}
+.banner .nav .nav-container .hamburger-container .hamburger {
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0 2px 2px rgba(18, 20, 28, 0.863));
+          filter: drop-shadow(0 2px 2px rgba(18, 20, 28, 0.863));
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+.banner .nav .nav-links {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  font-size: 24px;
+  height: 100px;
+  justify-content: space-around;
+}
+@media (max-width: 501px) {
+  .banner .nav .nav-links {
+    -webkit-animation: scale-display--reversed 0.3s;
+            animation: scale-display--reversed 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  @-webkit-keyframes scale-display {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-display {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @-webkit-keyframes scale-display--reversed {
+    0% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    99% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+  }
+  @keyframes scale-display--reversed {
+    0% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    99% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+  }
+  .banner .nav .nav-links.visible {
+    -webkit-animation: scale-display 0.3s;
+            animation: scale-display 0.3s;
+    max-height: 100px;
+    transition: max-height 0.2s ease-in;
+  }
+}
+.banner .nav .nav-links .nav-link {
+  color: rgba(220, 230, 247, 0.8);
+  padding: 5px 5px;
+  text-decoration: none;
+  text-shadow: 0 4px 4px #12141c;
+}
+.banner .nav .nav-links .nav-link:hover {
+  background: radial-gradient(ellipse at center, rgba(68, 94, 147, 0.76) 0%, rgba(68, 94, 147, 0.68) 9%, rgba(68, 94, 147, 0.45) 26%, rgba(5, 171, 224, 0.26) 40%, rgba(5, 171, 224, 0) 60%);
+  color: #dce6f7;
+}

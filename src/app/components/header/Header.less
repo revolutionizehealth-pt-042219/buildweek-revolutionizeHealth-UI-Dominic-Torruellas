@@ -1,23 +1,7 @@
-// Global CSS
-@import '../../Less/_globals.less';
-
-body {
-  background-color: darken(@dark-blue, 10%);
-  font-family: Roboto, sans-serif;
-}
-
-.container {
-  background-color: @secondary;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 1080px;
-  min-height: 100vh;
-  position: relative;
-}
+@import '../../../Less/_variables.less';
 
 .banner {
-  background: url('../assets/images/top-banner.jpg');
+  background: url('../../assets/images/top-banner.jpg');
   background-size: cover;
   box-shadow: 0 4px 4px rgba(@shadow-color, 0.25);
   mix-blend-mode: luminosity;
@@ -141,10 +125,4 @@ body {
       }
     }
   }
-}
-
-.body {
-  flex: 1 0 auto;
-  min-height: 100%;
-  padding: 0 10px;
 }
