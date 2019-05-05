@@ -1,7 +1,7 @@
 import './about.css';
-import { Render } from '../../utils/dom-tools';
+import { Render } from '../utils/dom-tools';
 
-import Cards from '../../components/about-card/Card';
+import Cards from '../components/about-card/Card';
 
 document
   .querySelector('.hamburger')
