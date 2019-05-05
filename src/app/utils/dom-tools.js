@@ -1,18 +1,29 @@
 const createElement = (type, { classes, attributes }, children = null) => {
   const newElement = document.createElement(type);
   if (classes) {
-    classes.forEach(classItem => newElement.classList.add(classItem));
+    if (Array.isArray(classes)) {
+      classes.forEach(classItem => newElement.classList.add(classItem));
+    } else {
+      newElement.classList.add(classes);
+    }
   }
 
   if (attributes) {
-    attributes.forEach(([key, value]) => newElement.setAttribute(key, value));
+    if (Array.isArray(attributes[0])) {
+      attributes.forEach(([key, value]) => newElement.setAttribute(key, value));
+    } else {
+      const [key, value] = attributes;
+      newElement.setAttribute(key, value);
+    }
   }
 
   if (children) {
     if (typeof children === 'string') {
       newElement.textContent = children;
-    } else {
+    } else if (Array.isArray(children)) {
       children.forEach(child => newElement.appendChild(child));
+    } else {
+      newElement.appendChild(children);
     }
   }
 
@@ -29,15 +40,10 @@ const Render = (selector, elements) => {
   }
 };
 
-const Div = (cls, children) =>
-  createElement('div', { classes: [cls] }, children);
+const Div = (cls, children) => createElement('div', { classes: cls }, children);
 const Img = (cls, src) =>
-  createElement('img', { classes: [cls], attributes: [['src', src]] });
+  createElement('img', { classes: cls, attributes: ['src', src] });
 const Link = (cls, href, children) =>
-  createElement(
-    'a',
-    { classes: [cls], attributes: [['href', href]] },
-    children
-  );
+  createElement('a', { classes: cls, attributes: ['href', href] }, children);
 
 export { createElement, Render, Div, Img, Link };
