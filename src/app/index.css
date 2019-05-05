@@ -374,7 +374,7 @@ body {
   position: relative;
 }
 .banner {
-  background: url('./images/top-banner.jpg');
+  background: url('../assets/images/top-banner.jpg');
   background-size: cover;
   box-shadow: 0 4px 4px rgba(18, 20, 28, 0.25);
   mix-blend-mode: luminosity;
@@ -612,7 +612,7 @@ body {
   z-index: 0;
 }
 .footer .footer-background-container::before {
-  background-image: url('./images/footer-image.jpg');
+  background-image: url('../assets/images/footer-image.jpg');
   background-size: cover;
   content: '';
   display: block;
