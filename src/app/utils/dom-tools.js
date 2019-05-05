@@ -41,8 +41,10 @@ const Render = (selector, elements) => {
 };
 
 const Div = (cls, children) => createElement('div', { classes: cls }, children);
+
 const Img = (cls, src) =>
   createElement('img', { classes: cls, attributes: ['src', src] });
+
 const Link = (cls, href, children) =>
   createElement('a', { classes: cls, attributes: ['href', href] }, children);
 
