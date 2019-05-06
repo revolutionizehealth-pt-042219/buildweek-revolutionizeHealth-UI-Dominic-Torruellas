@@ -19,7 +19,13 @@ const HeaderElement = Header(
     Div({ className: 'nav-links' }, [
       Link({ className: 'nav-link', href: '/index.html' }, 'Home'),
       Link({ className: 'nav-link', href: '/about/about.html' }, 'About Us'),
-      Link({ className: 'nav-link', href: '#' }, 'Login'),
+      Link(
+        {
+          className: 'nav-link',
+          href: 'https://zealous-turing-8929f5.netlify.com/',
+        },
+        'Login'
+      ),
     ]),
   ])
 );

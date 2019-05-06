@@ -15,7 +15,10 @@ const RightFooterCard = Div(
   Ul({ className: 'footer-links' }, [
     Li(null, Link({ href: '/index.html' }, 'Home')),
     Li(null, Link({ href: '/about/about.html' }, 'About us')),
-    Li(null, Link({ href: '#' }, 'Login')),
+    Li(
+      null,
+      Link({ href: 'https://zealous-turing-8929f5.netlify.com/' }, 'Login')
+    ),
   ])
 );
 
