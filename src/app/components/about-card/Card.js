@@ -51,16 +51,16 @@ const devs = [
 ];
 
 export default Div(
-  'about-card-container',
+  { className: 'about-card-container' },
   devs.map(({ img, name, position, github }) =>
-    Div('about-card', [
-      Img('about-card-image', img),
-      Div('about-card-header', name),
-      Div('about-card-hr'),
-      Div('about-card-sub-header', position),
-      Div('about-card-link-section', [
-        Link('about-card-link', github, [
-          Img('about-card-link-img', gitHubImg),
+    Div({ className: 'about-card' }, [
+      Img({ className: 'about-card-image', src: img }),
+      Div({ className: 'about-card-header' }, name),
+      Div({ className: 'about-card-hr' }),
+      Div({ className: 'about-card-sub-header' }, position),
+      Div({ className: 'about-card-link-section' }, [
+        Link({ className: 'about-card-link', href: github }, [
+          Img({ className: 'about-card-link-img', src: gitHubImg }),
         ]),
       ]),
     ])

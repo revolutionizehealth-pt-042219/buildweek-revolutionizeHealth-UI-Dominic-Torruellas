@@ -2,6 +2,7 @@
   background: url('../../assets/images/top-banner.jpg');
   background-size: cover;
   box-shadow: 0 4px 4px rgba(18, 20, 28, 0.25);
+  margin-bottom: 15px;
   mix-blend-mode: luminosity;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
