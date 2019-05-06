@@ -32,6 +32,15 @@ const createElement = curry((type, { className, attr, events }, children) => {
     }
   }
 
+  if (events) {
+    if (Array.isArray(events[0])) {
+      events.forEach(([event, cb]) => newElement.addEventListener(event, cb));
+    } else {
+      const [event, cb] = events;
+      newElement.addEventListener(event, cb);
+    }
+  }
+
   if (children) {
     if (typeof children === 'string') {
       newElement.textContent = children;

@@ -3,6 +3,11 @@ import { Header, Nav, Div, Link, Img } from '../../utils/dom-tools';
 import LogoImg from '../../assets/images/Logo.svg';
 import HamburgerImg from '../../assets/images/Hamburger.svg';
 
+const isClicked = [
+  'click',
+  () => document.querySelector('.nav-links').classList.toggle('visible'),
+];
+
 const HeaderElement = Header(
   { className: 'banner' },
   Nav({ className: 'nav' }, [
@@ -13,7 +18,7 @@ const HeaderElement = Header(
       ),
       Div(
         { className: 'hamburger-container' },
-        Img({ className: 'hamburger', src: HamburgerImg })
+        Img({ className: 'hamburger', src: HamburgerImg, events: isClicked })
       ),
     ]),
     Div({ className: 'nav-links' }, [
