@@ -13,7 +13,8 @@ function curry(fn) {
   };
 }
 
-const createElement = curry((type, { className, attr, events }, children) => {
+const createElement = curry((type, props, children) => {
+  const { className, attr, events } = props ? props : {};
   const newElement = document.createElement(type);
   if (className) {
     if (Array.isArray(className)) {
@@ -64,9 +65,6 @@ const Render = (selector, elements) => {
   }
 };
 
-const Div = (options, children = null) =>
-  createElement('div', options ? options : {}, children);
-
 const Img = ({ src, ...options }) =>
   createElement('img', { ...options, attr: ['src', src] }, null);
 
@@ -81,6 +79,8 @@ const Link = ({ href, ...options }, children) => {
   );
   return newElement;
 };
+
+const Div = createElement('div');
 
 const Footer = (options, children = null) =>
   createElement('footer', options ? options : {}, children);

@@ -56,7 +56,7 @@ export default Div(
     Div({ className: 'about-card' }, [
       Img({ className: 'about-card-image', src: img }),
       Div({ className: 'about-card-header' }, name),
-      Div({ className: 'about-card-hr' }),
+      Div({ className: 'about-card-hr' }, null),
       Div({ className: 'about-card-sub-header' }, position),
       Div({ className: 'about-card-link-section' }, [
         Link({ className: 'about-card-link', href: github }, [
