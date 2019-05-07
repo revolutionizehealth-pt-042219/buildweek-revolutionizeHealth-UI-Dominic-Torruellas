@@ -13,7 +13,8 @@ function curry(fn) {
   };
 }
 
-const createElement = curry((type, { className, attr, events }, children) => {
+const createElement = curry((type, props, children) => {
+  const { className, attr, events } = props ? props : {};
   const newElement = document.createElement(type);
   if (className) {
     if (Array.isArray(className)) {
@@ -64,9 +65,6 @@ const Render = (selector, elements) => {
   }
 };
 
-const Div = (options, children = null) =>
-  createElement('div', options ? options : {}, children);
-
 const Img = ({ src, ...options }) =>
   createElement('img', { ...options, attr: ['src', src] }, null);
 
@@ -82,29 +80,23 @@ const Link = ({ href, ...options }, children) => {
   return newElement;
 };
 
-const Footer = (options, children = null) =>
-  createElement('footer', options ? options : {}, children);
+const Div = createElement('div');
 
-const P = (options, children = null) =>
-  createElement('p', options ? options : {}, children);
+const Footer = createElement('footer');
 
-const Ul = (options, children = null) =>
-  createElement('ul', options ? options : {}, children);
+const P = createElement('p');
 
-const Li = (options, children = null) =>
-  createElement('li', options ? options : {}, children);
+const Ul = createElement('ul');
 
-const Header = (options, children = null) =>
-  createElement('header', options ? options : {}, children);
+const Li = createElement('li');
 
-const Nav = (options, children = null) =>
-  createElement('nav', options ? options : {}, children);
+const Header = createElement('header');
 
-const H2 = (options, children = null) =>
-  createElement('h2', options ? options : {}, children);
+const Nav = createElement('nav');
 
-const Section = (options, children = null) =>
-  createElement('h2', options ? options : {}, children);
+const H2 = createElement('h2');
+
+const Section = createElement('section');
 
 export {
   createElement,
