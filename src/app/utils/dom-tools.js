@@ -82,29 +82,21 @@ const Link = ({ href, ...options }, children) => {
 
 const Div = createElement('div');
 
-const Footer = (options, children = null) =>
-  createElement('footer', options ? options : {}, children);
+const Footer = createElement('footer');
 
-const P = (options, children = null) =>
-  createElement('p', options ? options : {}, children);
+const P = createElement('p');
 
-const Ul = (options, children = null) =>
-  createElement('ul', options ? options : {}, children);
+const Ul = createElement('ul');
 
-const Li = (options, children = null) =>
-  createElement('li', options ? options : {}, children);
+const Li = createElement('li');
 
-const Header = (options, children = null) =>
-  createElement('header', options ? options : {}, children);
+const Header = createElement('header');
 
-const Nav = (options, children = null) =>
-  createElement('nav', options ? options : {}, children);
+const Nav = createElement('nav');
 
-const H2 = (options, children = null) =>
-  createElement('h2', options ? options : {}, children);
+const H2 = createElement('h2');
 
-const Section = (options, children = null) =>
-  createElement('h2', options ? options : {}, children);
+const Section = createElement('section');
 
 export {
   createElement,
